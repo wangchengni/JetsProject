@@ -1,3 +1,5 @@
-HotAirBalloon,nimbus,100.2,75,1234
-CargoJet,Boeing 737,234,325,5432
-Passenger,Boeing Max,7,1,12
+Seaplane,Kenmore,100,4000,20000
+CargoPlane,AirBus,230,2300,2340,350000
+Passenger,Boing777,200,50000,1200000
+PrivateJet,Bombardier,300,18000,8900000
+FighterJet,Lighting,360,22000,900000
