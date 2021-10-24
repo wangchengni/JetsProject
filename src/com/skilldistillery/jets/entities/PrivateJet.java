@@ -1,6 +1,7 @@
 package com.skilldistillery.jets.entities;
 
 public class PrivateJet extends Jet implements PrivatTrip{
+	public PrivateJet() {}
 
 	@Override
 	public String toString() {

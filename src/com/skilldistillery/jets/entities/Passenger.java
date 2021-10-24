@@ -6,6 +6,7 @@ public class Passenger extends Jet implements PassengerFly {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}
+	public Passenger() {}
 	public void Fly() {
 		System.out.println("Fly happy");
 	}
