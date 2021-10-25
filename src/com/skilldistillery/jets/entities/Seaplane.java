@@ -10,7 +10,12 @@ public class Seaplane extends Jet implements SeaplaneLanding {
 		// TODO Auto-generated constructor stub
 	}
 	public void landing() {
-		System.out.println("Landing successfully");
+		System.out.println("Please prepare for sea landing~~~~~~~~~~~~~~!!!");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("Land successfully, Welcome to the Moonisland!!!");
 	}
 	
 		

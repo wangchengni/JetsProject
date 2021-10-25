@@ -13,6 +13,9 @@ public class PrivateJet extends Jet implements PrivatTrip{
 		// TODO Auto-generated constructor stub
 	}
 	public void trip() {
-		System.out.println("Enjoy your trip, VVVIP");
+		System.out.println("Welcome to your jet, VVVIP!!");
+		System.out.println("Our flight will pass German, England!!");
+		System.out.println("Please feel free to ask any service !!");
+		System.out.println("Enjoy your world fly!!");
 	}
 }

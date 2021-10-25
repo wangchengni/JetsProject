@@ -10,7 +10,9 @@ public   class CargoPlane extends Jet implements CargoCarrier{
 	}
 	
 	public void loadCargo() {
-		System.out.println("loading successfully");
+		System.out.println("Cargo is loading");
+		System.out.println("Please watch out");
+		System.out.println("Get your baggage at door 3");
 	}
 
 	@Override

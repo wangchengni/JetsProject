@@ -8,7 +8,9 @@ public class Passenger extends Jet implements PassengerFly {
 	}
 	public Passenger() {}
 	public void Fly() {
-		System.out.println("Fly happy");
+		System.out.println("Ladies and Gentlemen");
+		System.out.println("We are taking off right now");
+		System.out.println("please fasten your seat belt and fly happy");
 	}
 	@Override
 	public String toString() {

@@ -11,7 +11,9 @@ public class FighterJet extends Jet implements CombatReady{
 
 	
 	public void fight() {
-		System.out.println("This is fast");
+		System.out.println("Let me show you pour best fighter jets in the world!");
+		System.out.println("Come with me right now!");
+		System.out.println("It's our pleasure to show you these wonderful jets");
 	}
 
 

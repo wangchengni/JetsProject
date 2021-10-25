@@ -186,11 +186,11 @@ public class JetsApplictaion {
 
 			System.out.println("Please choose the following option");
 			System.out.println("-------------------------------------");
-			System.out.println("1.Watch out for landing");
+			System.out.println("1.Watch out for Sea landing");
 			System.out.println("2.Loading all Cargos");
-			System.out.println("3.Fly Safe");
-			System.out.println("4.Enjoy your trip");
-			System.out.println("5.Amazing fight!");
+			System.out.println("3.Passenger :Fly Safe");
+			System.out.println("4.Enjoy your private trip");
+			System.out.println("5.Amazing fighter Jets!");
 			System.out.println("6.Quiting.......");
 			System.out.println("-------------------------------------");
 
@@ -279,6 +279,7 @@ public class JetsApplictaion {
 			int range;
 			long price;
 
+			AirField ar = new AirField();
 			boolean keepdoing = true;
 			while (keepdoing == true) {
 				int numSelected = kb.nextInt();
@@ -291,6 +292,7 @@ public class JetsApplictaion {
 					range = kb.nextInt();
 					price = kb.nextLong();
 					fast.add(new Seaplane(Model, Speed, range, price));
+					ar.addSeaplane(fast);
 
 					break;
 				case 2:
@@ -300,6 +302,8 @@ public class JetsApplictaion {
 					range = kb.nextInt();
 					price = kb.nextLong();
 					fast.add(new CargoPlane(Model, Speed, range, price));
+					ar.addCargoJet(fast);
+
 					break;
 				case 3:
 					System.out.println("Please provide Model,Speed,Range and Price for your Passenger Plane");
@@ -308,6 +312,8 @@ public class JetsApplictaion {
 					range = kb.nextInt();
 					price = kb.nextLong();
 					fast.add(new Passenger(Model, Speed, range, price));
+					ar.addPassenger(fast);
+
 					break;
 				case 4:
 					System.out.println("Please provide Model,Speed,Range and Price for your Private Jets");
@@ -316,6 +322,7 @@ public class JetsApplictaion {
 					range = kb.nextInt();
 					price = kb.nextLong();
 					fast.add(new PrivateJet(Model, Speed, range, price));
+					ar.addPrivateJet(fast);
 					break;
 				case 5:
 					System.out.println("Please provide Model,Speed,Range and Price for your Fighter jets");
@@ -324,6 +331,7 @@ public class JetsApplictaion {
 					range = kb.nextInt();
 					price = kb.nextLong();
 					fast.add(new FighterJet(Model, Speed, range, price));
+					ar.addFighterJet(fast);
 					break;
 				case 6:
 					System.out.println("Quiting......");
@@ -415,8 +423,7 @@ public class JetsApplictaion {
 			System.out.println("6.I don't want to remove anything, I gonna quit");
 			System.out.println("-------------------------------------");
 
-			 
-			String command = kb.next().toUpperCase();
+			String command;
 			boolean keepdoing = true;
 			while (keepdoing == true) {
 				int numSelected = kb.nextInt();
@@ -425,50 +432,59 @@ public class JetsApplictaion {
 				case 1:
 					System.out.println("Are you sure you want to remove this one");
 					System.out.println("Press Y to delete, N to quit");
+					command = kb.next() ;
 					if(command.equals("Y")) {
-						
 						fast.remove(0);
-					}else {
+					}if(command.equals("N")) {
+						System.out.println("Done choosing,exiting");
 						keepdoing = false;
 					}
 					break;
 				case 2:
 					System.out.println("Are you sure you want to remove this one");
 					System.out.println("Press Y to delete, N to quit");
+					command = kb.next().toUpperCase();
 					if(command.equals("Y")) {
 						
 						fast.remove(1);
-					}else {
+					}if(command.equals("N")) {
+						System.out.println("Done choosing,exiting");
 						keepdoing = false;
 					}
 					break;
 				case 3:
-					System.out.println("Are you sure you want to remove this one");  
 					System.out.println("Press Y to delete, N to quit");
+					System.out.println("Are you sure you want to remove this one");  
+					command = kb.next().toUpperCase();
 					if(command.equals("Y")) {
 						
 						fast.remove(2);
-					}else {
+					}if(command.equals("N")) {
+						System.out.println("Done choosing,exiting");
 						keepdoing = false;
 					}
 					break;
 				case 4:
 					System.out.println("Are you sure you want to remove this one");  
 					System.out.println("Press Y to delete, N to quit");
+					command = kb.next().toUpperCase();
 					if(command.equals("Y")) {
 						
 						fast.remove(3);
-					}else {
+					}if(command.equals("N")) {
+						System.out.println("Done choosing,exiting");
 						keepdoing = false;
 					}
 					break;
 				case 5:
 					System.out.println("Are you sure you want to remove this one");  
 					System.out.println("Press Y to delete, N to quit");
+					command = kb.next().toUpperCase();
 					if(command.equals("Y")) {
 						
 						fast.remove(4);
 					}else {
+						System.out.println("Done choosing,exiting");
 						keepdoing = false;
 					}
 					break;
@@ -490,8 +506,8 @@ public class JetsApplictaion {
 	public JetsApplictaion() {
 	}
 
-	private void launch() {
-	}
+//	private void launch() {
+//	}
 
 	private void displatUserMenu() {
 		System.out.println("These are the menu for you to choose");
@@ -502,9 +518,12 @@ public class JetsApplictaion {
 		System.out.println("4.View jet with longegst range");
 		System.out.println("5.Load all Cargo Jets");
 		System.out.println("6.Dogfight!");
-		System.out.println("7.Add a jet to Fleet");
-		System.out.println("8.Remove a jet from Fleet");
-		System.out.println("9.quit");
+		System.out.println("7.Private Trip!");
+		System.out.println("8.Passenger Welcome!");
+		System.out.println("9.Sea Plane fly!");
+		System.out.println("10.Add a jet to Fleet");
+		System.out.println("11.Remove a jet from Fleet");
+		System.out.println("12.quit");
 		System.out.println("-------------------------------------");
 		runApp();
 	}
@@ -537,21 +556,24 @@ public class JetsApplictaion {
 				break;
 			case 5:
 			case 6:
-				System.out.println("Load all CargoCarrier");
+			case 7:
+			case 8:
+			case 9:
+				System.out.println("Choose your Options you want");
 				String Filename5 = "jets.txt";
 				ChooseOption(Filename5);
 				break;
-			case 7:
+			case 10:
 				System.out.println("Please tell me what you want to add");
 				String Filename7 = "jets.txt";
 				AddJets(Filename7);
 				break;
-			case 8:
+			case 11:
 				System.out.println("Please tell me what you want to remove");
 				String Filename8 = "jets.txt";
 				Removejets(Filename8);
 				break;
-			case 9:
+			case 12:
 				System.out.println("Quiting......");
 				keepdoing = false;
 				break;
